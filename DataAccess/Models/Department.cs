@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
-    public partial class Department
+    public class Department
     {
         public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }

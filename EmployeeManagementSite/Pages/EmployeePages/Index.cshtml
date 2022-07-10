@@ -5,8 +5,15 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
+<h1>Employee List</h1>
+<form asp-page="./Index" class="class=" m-2 p-3 bg-light" method="get">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" aria-describedby="basic-addon1" name="SearchString" placeholder="Name or Job Title" value="@Model.CurrentFilter" />
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </div>
+    </div>
+</form>
 <p>
     <a asp-page="Create">Create New</a>
 </p>
@@ -41,7 +48,7 @@
                 @Html.DisplayFor(modelItem => item.JobTitle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Department.DepartmentId)
+                @Html.DisplayFor(modelItem => item.Department.DepartmentName)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.EmployeeId">Edit</a> |

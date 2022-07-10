@@ -24,7 +24,6 @@ namespace EmployeeAPI.Controllers
         }
 
         [EnableQuery]
-        [HttpGet]
         public async Task<IActionResult> Get()
         {
             try

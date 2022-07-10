@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
-    public partial class Employee
+    public class Employee
     {
         public int EmployeeId { get; set; }
         [Required(ErrorMessage = "This field is required")]

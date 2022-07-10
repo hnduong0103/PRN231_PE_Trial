@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DataAccess.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EmployeeManagementSite.Pages.EmployeePages
 {
+    [Authorize(Roles = "Administrator")]
     public class CreateModel : PageModel
     {
         private readonly DataAccess.Models.DepartmentEmployeePETrailContext _context;

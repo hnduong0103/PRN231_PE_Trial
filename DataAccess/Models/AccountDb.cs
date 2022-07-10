@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Models
 {
-    public partial class AccountDb
+    public class AccountDb
     {
         [Key]
         [Required(ErrorMessage = "Email is required!!")]

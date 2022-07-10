@@ -55,10 +55,14 @@ namespace EmployeeManagementSite.Pages.LoginPages
                     claims.Add(new Claim(ClaimTypes.NameIdentifier, UserInput.Password));
                     if (UserInfo.AccountRole == 1)
                     {
-                        claims.Add(new Claim(ClaimTypes.Role, "Admin"));
-                        returnUrl = "/Index";
+                        claims.Add(new Claim(ClaimTypes.Role, "Administrator"));
+                        returnUrl = "/EmployeePages/Index";
                     }
-                    else
+                    else if (UserInfo.AccountRole == 2)
+                    {
+                        claims.Add(new Claim(ClaimTypes.Role, "Manager"));
+                        returnUrl = "/AccessDenied";
+                    } else
                     {
                         claims.Add(new Claim(ClaimTypes.Role, "Staff"));
                         returnUrl = "/AccessDenied";
@@ -72,6 +76,10 @@ namespace EmployeeManagementSite.Pages.LoginPages
                 {
                     TempData["Error"] = "Invalid password/username";
                 }
+            }
+            if (UserInput.Email != null && UserInput.Password != null)
+            {
+                ViewData["Message"] = string.Format("Your account or password is incorrect. Try again!");
             }
             return Page();
         }

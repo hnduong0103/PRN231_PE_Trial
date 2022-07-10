@@ -6,24 +6,48 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DataAccess.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Net.Http;
+using System.Text.Json;
 
 namespace EmployeeManagementSite.Pages.EmployeePages
 {
+    [Authorize(Roles = "Administrator")]
     public class IndexModel : PageModel
     {
-        private readonly DataAccess.Models.DepartmentEmployeePETrailContext _context;
+        public IList<Employee> Employee { get; set; }
+        public string CurrentFilter { get; set; }
 
-        public IndexModel(DataAccess.Models.DepartmentEmployeePETrailContext context)
+        public async Task OnGetAsync(string searchString)
         {
-            _context = context;
-        }
+            Employee = new List<Employee>();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                CurrentFilter = searchString;
+                HttpClient client = new HttpClient();
+                HttpResponseMessage response;
+                response = await client.GetAsync($"http://localhost:5000/odata/Employees?$filter=contains(FullName, '{CurrentFilter}') or contains(JobTitle, '{CurrentFilter}')");
 
-        public IList<Employee> Employee { get;set; }
-
-        public async Task OnGetAsync()
-        {
-            Employee = await _context.Employees
-                .Include(e => e.Department).ToListAsync();
+                HttpContent content = response.Content;
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+                var jdo = await System.Text.Json.JsonSerializer.DeserializeAsync<JDO<Employee>>(content.ReadAsStream(), options);
+                Employee = jdo.value;
+            }
+            else
+            {
+                HttpClient client = new HttpClient();
+                HttpResponseMessage response = await client.GetAsync("http://localhost:5000/odata/Employees");
+                HttpContent content = response.Content;
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+                var jdo = await System.Text.Json.JsonSerializer.DeserializeAsync<JDO<Employee>>(content.ReadAsStream(), options);
+                Employee = jdo.value;
+            }
         }
     }
 }

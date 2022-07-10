@@ -7,18 +7,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DataAccess.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Net.Http;
+using System.Text.Json;
+using System.Text;
 
 namespace EmployeeManagementSite.Pages.EmployeePages
 {
+    [Authorize(Roles = "Administrator")]
     public class EditModel : PageModel
     {
-        private readonly DataAccess.Models.DepartmentEmployeePETrailContext _context;
-
-        public EditModel(DataAccess.Models.DepartmentEmployeePETrailContext context)
-        {
-            _context = context;
-        }
-
         [BindProperty]
         public Employee Employee { get; set; }
 
@@ -29,14 +27,24 @@ namespace EmployeeManagementSite.Pages.EmployeePages
                 return NotFound();
             }
 
-            Employee = await _context.Employees
-                .Include(e => e.Department).FirstOrDefaultAsync(m => m.EmployeeId == id);
+            HttpClient client = new HttpClient();
+
+            HttpResponseMessage response = await client.GetAsync($"http://localhost:5000/odata/Employees({id})");
+            HttpContent content = response.Content;
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+            Employee _employee = null;
+            _employee = await JsonSerializer.DeserializeAsync<Employee>(content.ReadAsStream(), options);
+
+            Employee = _employee;
 
             if (Employee == null)
             {
                 return NotFound();
             }
-           ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "DepartmentId");
+            //ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "DepartmentId");
             return Page();
         }
 
@@ -49,30 +57,13 @@ namespace EmployeeManagementSite.Pages.EmployeePages
                 return Page();
             }
 
-            _context.Attach(Employee).State = EntityState.Modified;
+            HttpClient client = new HttpClient();
+            var json = JsonSerializer.Serialize(Employee);
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!EmployeeExists(Employee.EmployeeId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
+            HttpResponseMessage response = await client.PutAsync($"http://localhost:5000/odata/Employees({Employee.EmployeeId})",
+                new StringContent(json, Encoding.UTF8, "application/json"));
             return RedirectToPage("./Index");
         }
 
-        private bool EmployeeExists(int id)
-        {
-            return _context.Employees.Any(e => e.EmployeeId == id);
-        }
     }
 }

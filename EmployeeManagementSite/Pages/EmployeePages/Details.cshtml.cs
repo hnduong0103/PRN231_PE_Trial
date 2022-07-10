@@ -6,18 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DataAccess.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Net.Http;
+using System.Text.Json;
 
 namespace EmployeeManagementSite.Pages.EmployeePages
 {
+    [Authorize(Roles = "Administrator")]
     public class DetailsModel : PageModel
     {
-        private readonly DataAccess.Models.DepartmentEmployeePETrailContext _context;
-
-        public DetailsModel(DataAccess.Models.DepartmentEmployeePETrailContext context)
-        {
-            _context = context;
-        }
-
+        [BindProperty]
         public Employee Employee { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -27,8 +25,18 @@ namespace EmployeeManagementSite.Pages.EmployeePages
                 return NotFound();
             }
 
-            Employee = await _context.Employees
-                .Include(e => e.Department).FirstOrDefaultAsync(m => m.EmployeeId == id);
+            HttpClient client = new HttpClient();
+
+            HttpResponseMessage response = await client.GetAsync($"http://localhost:5000/odata/Employees({id})");
+            HttpContent content = response.Content;
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+            Employee _employee = null;
+            _employee = await JsonSerializer.DeserializeAsync<Employee>(content.ReadAsStream(), options);
+
+            Employee = _employee;
 
             if (Employee == null)
             {
