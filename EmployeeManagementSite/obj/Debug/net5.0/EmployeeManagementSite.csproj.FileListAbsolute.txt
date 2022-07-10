@@ -149,3 +149,8 @@ D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManageme
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.pdb
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.genruntimeconfig.cache
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\EmployeePages\Create.cshtml.g.cs
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\EmployeePages\Delete.cshtml.g.cs
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\EmployeePages\Details.cshtml.g.cs
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\EmployeePages\Edit.cshtml.g.cs
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\EmployeePages\Index.cshtml.g.cs
