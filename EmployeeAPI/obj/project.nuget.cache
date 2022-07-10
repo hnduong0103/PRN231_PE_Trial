@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mHldNC7hQhP6yKIfxd9+ZNmEKN05bbs6iKuJI1xAw5lUt6Pt67yQZsZAlRjPBhV9XCEgIEybn/e9usGvPjjCFg==",
+  "dgSpecHash": "cOH1Q57Ww4Jj+WDWU7wUIiFCJVGBVUXvBiILsjZ/rInm1LZ1oYWodMq65K+DP/1YmVioLW64cPXeWo/OOdfNug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\EmployeeAPI\\EmployeeAPI.csproj",
+  "projectFilePath": "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\EmployeeAPI\\EmployeeAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hnduo\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.12\\microsoft.aspnetcore.jsonpatch.5.0.12.nupkg.sha512",
     "C:\\Users\\hnduo\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.12\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.12.nupkg.sha512",

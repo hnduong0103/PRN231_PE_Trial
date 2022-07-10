@@ -1,0 +1,8 @@
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.csproj.AssemblyReference.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.AssemblyInfoInputs.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.AssemblyInfo.cs
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.csproj.CoreCompileInputs.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.MvcApplicationPartsAssemblyInfo.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.RazorAssemblyInfo.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\EmployeeManagementSite.RazorAssemblyInfo.cs

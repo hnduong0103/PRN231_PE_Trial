@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GdwDweI68bJV7S8DZlSE6ThV/czGYxI/kvg3qrojr0AEZvpgWPe57RMWyxdRHbyTbkGMaWsPTyQLl75PgycMjw==",
+  "dgSpecHash": "VwBOg4nWwLAaBJqVAYXesgWaolnSI8ir0xtr859To+9/L95qJqFfZk5SPHZleCnM48MH+UBplSe9N9ugIPuttg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj",
+  "projectFilePath": "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hnduo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\hnduo\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

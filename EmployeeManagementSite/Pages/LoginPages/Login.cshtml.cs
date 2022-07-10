@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace eBookStoreFE.Pages.Auth
+namespace EmployeeManagementSite.Pages.LoginPages
 {
     public class LoginModel : PageModel
     {

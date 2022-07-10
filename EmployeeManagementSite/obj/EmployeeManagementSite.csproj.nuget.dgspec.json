@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj": {}
+    "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\DataAccess\\DataAccess.csproj": {
+    "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\hnduo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\DataAccess\\obj\\",
+        "outputPath": "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hnduo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -80,14 +80,14 @@
         }
       }
     },
-    "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj": {
+    "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj",
+        "projectUniqueName": "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj",
         "projectName": "EmployeeManagementSite",
-        "projectPath": "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj",
+        "projectPath": "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\EmployeeManagementSite\\EmployeeManagementSite.csproj",
         "packagesPath": "C:\\Users\\hnduo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\EmployeeManagementSite\\obj\\",
+        "outputPath": "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\EmployeeManagementSite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hnduo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -104,8 +104,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\hnduo\\source\\repos\\PEPRN231Trial\\DataAccess\\DataAccess.csproj"
+              "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\FPT SUMMER 2022\\PRN231\\PETrial\\PEPRN231Trial\\PRN231_PE_Trial\\DataAccess\\DataAccess.csproj"
               }
             }
           }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    public class LoginModel
+    public class UserModel
     {
         [Required(ErrorMessage = "Email is required!!")]
         public string Email { get; set; }
