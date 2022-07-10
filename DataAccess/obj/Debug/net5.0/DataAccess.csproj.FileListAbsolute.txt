@@ -1,0 +1,15 @@
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.json
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.dev.json
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\bin\Debug\net5.0\DataAccess.dll
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.dll
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
