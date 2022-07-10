@@ -48,6 +48,7 @@ namespace EmployeeAPI
             });
 
             services.AddSingleton(typeof(IEmployeeRepository), typeof(EmployeeRepository));
+            services.AddSingleton(typeof(IUserRepository), typeof(UserRepository));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -96,6 +97,7 @@ namespace EmployeeAPI
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Employee>("Employees");
+            builder.EntitySet<AccountDb>("AccountDbs");
             return builder.GetEdmModel();
         }
     }

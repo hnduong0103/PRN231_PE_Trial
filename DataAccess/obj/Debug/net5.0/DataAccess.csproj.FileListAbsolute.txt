@@ -13,3 +13,18 @@ C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess
 C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.pdb
 C:\Users\hnduo\source\repos\PEPRN231Trial\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.json
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.dev.json
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\bin\Debug\net5.0\DataAccess.dll
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.dll
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache

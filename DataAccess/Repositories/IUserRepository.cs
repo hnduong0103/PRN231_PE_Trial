@@ -9,6 +9,6 @@ namespace DataAccess.Repositories
 {
     public interface IUserRepository
     {
-        AccountDb Login(LoginModel login);
+        AccountDb Login(UserModel login);
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace eBookStoreFE.Pages.Auth
+namespace EmployeeManagementSite.Pages.LoginPages
 {
     public class LogoutModel : PageModel
     {

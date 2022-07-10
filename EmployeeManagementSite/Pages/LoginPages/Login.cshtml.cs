@@ -31,7 +31,47 @@ namespace EmployeeManagementSite.Pages.LoginPages
         {
             if (ModelState.IsValid)
             {
-                
+                HttpClient client = new HttpClient();
+                var json = JsonSerializer.Serialize(UserInput);
+
+                HttpResponseMessage response = await client.PostAsync("http://localhost:5000/odata/AccountDbs",
+                    new StringContent(json, Encoding.UTF8, "application/json"));
+                HttpContent content = response.Content;
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                AccountDb UserInfo = null;
+                if (response.StatusCode != System.Net.HttpStatusCode.NoContent)
+                {
+                    UserInfo = await JsonSerializer.DeserializeAsync<AccountDb>(content.ReadAsStream(), options);
+                }
+
+                if (UserInfo != null)
+                {
+                    HttpContext.Session.SetString("UserID", UserInfo.UserId);
+                    var claims = new List<Claim>();
+                    claims.Add(new Claim("Email", UserInput.Email));
+                    claims.Add(new Claim(ClaimTypes.NameIdentifier, UserInput.Password));
+                    if (UserInfo.AccountRole == 1)
+                    {
+                        claims.Add(new Claim(ClaimTypes.Role, "Admin"));
+                        returnUrl = "/Index";
+                    }
+                    else
+                    {
+                        claims.Add(new Claim(ClaimTypes.Role, "Staff"));
+                        returnUrl = "/AccessDenied";
+                    }
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var claimPrincipal = new ClaimsPrincipal(claimsIdentity);
+                    await HttpContext.SignInAsync(claimPrincipal);
+                    return RedirectToPage(returnUrl);
+                }
+                else
+                {
+                    TempData["Error"] = "Invalid password/username";
+                }
             }
             return Page();
         }

@@ -12,22 +12,28 @@ namespace EmployeeAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LoginModelsController : ODataController
+    public class AccountDbsController : ODataController
     {
         private readonly IUserRepository repo;
 
-        public LoginModelsController(IUserRepository repo)
+        public AccountDbsController(IUserRepository repo)
         {
             this.repo = repo;
         }
 
         [EnableQuery]
-        public async Task<IActionResult> Post([FromBody] LoginModel model)
+        public async Task<IActionResult> Get()
+        {
+            return Ok();
+        }
+
+        [EnableQuery]
+        public async Task<IActionResult> Post([FromBody] UserModel model)
         {
             try
             {
-                repo.Login(model);
-                return Ok(model);
+                var loggedUser = repo.Login(model);
+                return Ok(loggedUser);
             }
             catch (Exception e)
             {

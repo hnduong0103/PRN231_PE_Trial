@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
-        public AccountDb Login(LoginModel model)
+        public AccountDb Login(UserModel model)
         {
             try
             {

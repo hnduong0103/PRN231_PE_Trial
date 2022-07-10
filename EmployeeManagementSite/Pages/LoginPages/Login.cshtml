@@ -1,20 +1,36 @@
-﻿@page
+﻿@page "/"
 @model EmployeeManagementSite.Pages.LoginPages.LoginModel
 @{
+    Layout = null;
 }
-<h1 class="text-center">Login</h1>
-<form method="post" class="m-2 p-3 bg-light">
-    <div class="form-group">
-        <label asp-for="@Model.UserInput.Email"></label>
-        <input type="text" asp-for="@Model.UserInput.Email" class="form-control" />
-        <span asp-validation-for="@Model.UserInput.Email" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="@Model.UserInput.Password"></label>
-        <input type="password" asp-for="@Model.UserInput.Password" class="form-control" />
-        <span asp-validation-for="@Model.UserInput.Password" class="text-danger"></span>
-    </div>
-    <div class="form-group mt-3">
-        <button class="btn btn-primary" type="submit">Sign in</button>
-    </div>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Book Publisher App</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <h1 class="text-center">Login</h1>
+    <form method="post" class="m-2 p-3 bg-light">
+        <div class="form-group">
+            <label asp-for="@Model.UserInput.Email"></label>
+            <input type="text" asp-for="@Model.UserInput.Email" class="form-control" />
+            <span asp-validation-for="@Model.UserInput.Email" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="@Model.UserInput.Password"></label>
+            <input type="password" asp-for="@Model.UserInput.Password" class="form-control" />
+            <span asp-validation-for="@Model.UserInput.Password" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <button class="btn btn-primary" type="submit">Sign in</button>
+        </div>
+    </form>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
