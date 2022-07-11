@@ -45,7 +45,7 @@ namespace EmployeeManagementSite.Pages.EmployeePages
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(int? id)
+/*        public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (id == null)
             {
@@ -53,22 +53,26 @@ namespace EmployeeManagementSite.Pages.EmployeePages
             }
 
             HttpClient client = new HttpClient();
-
+            var json = JsonSerializer.Serialize(Employee);
             HttpResponseMessage response = await client.GetAsync($"http://localhost:5000/odata/Employees({id})");
             HttpContent content = response.Content;
             var options = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             };
-            Employee _employee = null;
+            Employee _employee;
             _employee = await JsonSerializer.DeserializeAsync<Employee>(content.ReadAsStream(), options);
 
             Employee = _employee;
-            if (Employee != null)
-            {
-                client = new HttpClient();
-                response = await client.DeleteAsync($"http://localhost:5000/odata/Employees({id})");
-            }
+            client = new HttpClient();
+            HttpResponseMessage response = await client.DeleteAsync($"http://localhost:5000/odata/Employees({id})");
+            return RedirectToPage("./Index");
+        }*/
+
+        public async Task<IActionResult> OnPostAsync(int? id)
+        {
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.DeleteAsync($"http://localhost:5000/odata/Employees({id})");
             return RedirectToPage("./Index");
         }
     }

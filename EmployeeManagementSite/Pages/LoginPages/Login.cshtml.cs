@@ -83,5 +83,11 @@ namespace EmployeeManagementSite.Pages.LoginPages
             }
             return Page();
         }
+
+        public async Task<IActionResult> OnGetLogout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToPage("/LoginPages/Login");
+        }
     }
 }

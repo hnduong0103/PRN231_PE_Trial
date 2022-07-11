@@ -33,7 +33,7 @@ namespace EmployeeManagementSite.Pages.EmployeePages
             {
                 PropertyNameCaseInsensitive = true
             };
-            Employee _employee = null;
+            Employee _employee;
             _employee = await JsonSerializer.DeserializeAsync<Employee>(content.ReadAsStream(), options);
 
             Employee = _employee;

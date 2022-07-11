@@ -98,5 +98,29 @@ namespace EmployeeAPI.Controllers
                     : StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+
+        [EnableQuery]
+        public async Task<IActionResult> Delete([FromODataUri] int key)
+        {
+            try
+            {
+                var temp = repo.GetEmployeeById(key);
+
+                if (temp == null)
+                {
+                    return NotFound();
+                }
+
+                repo.Delete(key);
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return e.Message.Equals("This employee doesn't exist.")
+                    ? NotFound()
+                    : StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
     }
 }
