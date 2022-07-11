@@ -26,7 +26,7 @@ namespace EmployeeManagementSite.Pages.EmployeePages
                 CurrentFilter = searchString;
                 HttpClient client = new HttpClient();
                 HttpResponseMessage response;
-                response = await client.GetAsync($"http://localhost:5000/odata/Employees?$filter=contains(FullName, '{CurrentFilter}') or contains(JobTitle, '{CurrentFilter}')");
+                response = await client.GetAsync($"http://localhost:5000/odata/Employees?$filter=contains(FullName, '{CurrentFilter}') or contains(JobTitle, '{CurrentFilter}')?$expand=Department");
 
                 HttpContent content = response.Content;
                 var options = new JsonSerializerOptions
@@ -39,7 +39,7 @@ namespace EmployeeManagementSite.Pages.EmployeePages
             else
             {
                 HttpClient client = new HttpClient();
-                HttpResponseMessage response = await client.GetAsync("http://localhost:5000/odata/Employees");
+                HttpResponseMessage response = await client.GetAsync("http://localhost:5000/odata/Employees?$expand=Department");
                 HttpContent content = response.Content;
                 var options = new JsonSerializerOptions
                 {

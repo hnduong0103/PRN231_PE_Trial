@@ -28,3 +28,4 @@ D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\D
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.pdb
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
+D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\DataAccess\bin\Debug\net5.0\appsettings.json
