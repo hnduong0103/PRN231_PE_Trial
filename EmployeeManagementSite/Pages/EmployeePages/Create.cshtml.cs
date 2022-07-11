@@ -7,40 +7,49 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DataAccess.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Net.Http;
+using System.Text.Json;
+using System.Text;
 
 namespace EmployeeManagementSite.Pages.EmployeePages
 {
     [Authorize(Roles = "Administrator")]
     public class CreateModel : PageModel
     {
-        private readonly DataAccess.Models.DepartmentEmployeePETrailContext _context;
-
-        public CreateModel(DataAccess.Models.DepartmentEmployeePETrailContext context)
+        [BindProperty]
+        public Employee Employee { get; set; }
+        public async Task<IActionResult> OnGetAsync()
         {
-            _context = context;
-        }
-
-        public IActionResult OnGet()
-        {
-        ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "DepartmentId");
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync("http://localhost:5000/odata/Departments");
+            HttpContent content = response.Content;
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+            var jdo = await System.Text.Json.JsonSerializer.DeserializeAsync<JDO<Department>>(content.ReadAsStream(), options);
+            var department = jdo.value;
+            ViewData["DepartmentId"] = new SelectList(department, "DepartmentId", "DepartmentName");
             return Page();
         }
 
-        [BindProperty]
-        public Employee Employee { get; set; }
-
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
+            HttpClient client = new HttpClient();
+            var json = JsonSerializer.Serialize(Employee);
 
-            _context.Employees.Add(Employee);
-            await _context.SaveChangesAsync();
-
+            HttpResponseMessage response = await client.PostAsync("http://localhost:5000/odata/Employees",
+                new StringContent(json, Encoding.UTF8, "application/json"));
+            if (response.StatusCode != System.Net.HttpStatusCode.Created)
+            {
+                return Page();
+            }
             return RedirectToPage("./Index");
         }
+
     }
 }

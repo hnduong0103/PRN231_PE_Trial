@@ -27,7 +27,7 @@ namespace EmployeeManagementSite.Pages.EmployeePages
 
             HttpClient client = new HttpClient();
 
-            HttpResponseMessage response = await client.GetAsync($"http://localhost:5000/odata/Employees({id})");
+            HttpResponseMessage response = await client.GetAsync($"http://localhost:5000/odata/Employees({id})?$expand=Department");
             HttpContent content = response.Content;
             var options = new JsonSerializerOptions
             {

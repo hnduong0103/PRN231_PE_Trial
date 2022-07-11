@@ -134,7 +134,6 @@ D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManageme
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\LoginPages\Login.cshtml.g.cs
-D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\LoginPages\Logout.cshtml.g.cs
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 D:\FPT SUMMER 2022\PRN231\PETrial\PEPRN231Trial\PRN231_PE_Trial\EmployeeManagementSite\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs

@@ -44,7 +44,13 @@ namespace EmployeeManagementSite.Pages.EmployeePages
             {
                 return NotFound();
             }
-            //ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "DepartmentId");
+            client = new HttpClient();
+
+            response = await client.GetAsync("http://localhost:5000/odata/Departments");
+            content = response.Content;
+            var jdo = await System.Text.Json.JsonSerializer.DeserializeAsync<JDO<Department>>(content.ReadAsStream(), options);
+            var department = jdo.value;
+            ViewData["DepartmentId"] = new SelectList(department, "DepartmentId", "DepartmentName");
             return Page();
         }
 
